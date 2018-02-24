@@ -9,7 +9,6 @@ var bacon = "Shoulder turducken brisket, kevin swine andouille tri-tip salami ta
 function moreContent(){
 	var pElem = document.createTextNode(bacon);
 	more.appendChild(pElem);
-
 }
 
 //2. HTTP
@@ -17,6 +16,10 @@ function moreContent(){
 
 The function will hide the contents in the pargraph with the id of `less` after clicking on the `Show Less` link.*/
 
+function lessContent(){
+	var hide = document.getElementById('less');
+	hide.remove();
+}
 
 //3. Tacocat, The Original Palindrome King
 /*Create a function named `zoom` that will increase the font size of the paragraph with the id of `biggie` after hovering your mouse over it. Increae the font size to 150%*/
