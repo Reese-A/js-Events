@@ -23,21 +23,36 @@ function lessContent(){
 
 //3. Tacocat, The Original Palindrome King
 /*Create a function named `zoom` that will increase the font size of the paragraph with the id of `biggie` after hovering your mouse over it. Increae the font size to 150%*/
-
+function zoom(){
+	document.getElementById("biggie").style.fontsize = 'xx-large';
+}
 
 //4. McDonalds
 /*Create a variable name menuItems and assign it an array of three of your favorite items at McDonald's.
 
 Next, create a function named valueMenu that will display your favorite items in the paragraph the the id of `menu` after clicking on the showMenu paragraph.*/
 
+var menuItem = ['McChicken', 'McNuggets', 'French Fries'];
+function valueMenu(){
+	document.getElementById('menu').innerHTML = menuItem;
+}
 
 //5. Gin.
 /*Create a function named redFace that will change the paragraph text to red and a font size of 30px after clicking on the text.*/
 
+function redFace(){
+	var paraStyle = document.getElementById('drink');
+	paraStyle.style.color = "red";
+	paraStyle.style.size = 30;
+}
 
 //6. Peanut Butter Cup Oreos
 /*Create a function `showPrice` that will add the price of `$5.55` inside the paragraph with the id `price` after hovering your mouse over the paragraph.*/
 
+function showPrice(){
+	var oreoPrice = document.createTextNode('$5.55');
+	document.getElementById('price').appendChild(oreoPrice);
+}
 
 //7. Mr. Buttons
 /*Add an Event Listener to the button that will display `myQuote` inside the paragraph with the id of `displayQuote` after the button is clicked.*/
