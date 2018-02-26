@@ -58,6 +58,11 @@ function showPrice(){
 /*Add an Event Listener to the button that will display `myQuote` inside the paragraph with the id of `displayQuote` after the button is clicked.*/
 
 var myQuote = "Our lives are defined by opportunities; even the ones we miss.";
+Benjamin.addEventListener("click", addQuote);
+function addQuote(){
+	var quote = document.createTextNode(myQuote);
+	document.getElementById('displayQuote').appendChild(quote);
+}
 
 
 //8. Say It again, Randomly
