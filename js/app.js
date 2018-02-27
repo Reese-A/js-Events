@@ -7,8 +7,9 @@ The function will add the following content inside the paragraph with the id of 
 var bacon = "Shoulder turducken brisket, kevin swine andouille tri-tip salami tail ham sausage pork loin. Ribeye short loin rump kielbasa pork. Capicola short loin turducken corned beef tongue, chuck leberkas salami frankfurter. Kielbasa fatback pancetta, ground round meatball turducken jowl ribeye alcatra sirloin bacon corned beef beef ribs short loin. Pork belly spare ribs biltong corned beef meatball short ribs tongue alcatra swine drumstick. Biltong shankle kevin, cupim sirloin bresaola brisket. Tail pork belly biltong ball tip tri-tip, pig jerky cow pastrami prosciutto ;ground round bacon capicola tongue meatball.";
 
 function moreContent(){
-	var pElem = document.createTextNode(bacon);
-	more.appendChild(pElem);
+/*	var pElem = document.createTextNode(bacon);
+	more.appendChild(pElem);*/
+	more.innerHTML = bacon;
 }
 
 //2. HTTP
@@ -24,7 +25,7 @@ function lessContent(){
 //3. Tacocat, The Original Palindrome King
 /*Create a function named `zoom` that will increase the font size of the paragraph with the id of `biggie` after hovering your mouse over it. Increae the font size to 150%*/
 function zoom(){
-	document.getElementById("biggie").style.fontsize = 'xx-large';
+	document.getElementById("biggie").style.fontSize = '150%';
 }
 
 //4. McDonalds
@@ -43,7 +44,7 @@ function valueMenu(){
 function redFace(){
 	var paraStyle = document.getElementById('drink');
 	paraStyle.style.color = "red";
-	paraStyle.style.size = 30;
+	paraStyle.style.fontSize = '30px';
 }
 
 //6. Peanut Butter Cup Oreos
@@ -70,8 +71,22 @@ function addQuote(){
 
 var quotes = ["It's a funny thing about comin' home. Looks the same, smells the same, feels the same. You'll realize what's changed is you.", "Momma? Momma? Some days, I feel different than the day before.", "Some people, were born to sit by a river. Some get struck by lightning. Some have an ear for music. Some are artists. Some swim. Some know buttons. Some know Shakespeare. Some are mothers. And some people, dance.", "For what it's worth, it's never too late to be whoever you want to be."];
 
+random.addEventListener("click", displayRandom);
+function displayRandom(){
+	var i=Math.floor((Math.random() * 3) + 0);
+	displayQuote.innerHTML = quotes[i];
+}
 
 
 //9. Unlock the Secret to Financial Freedom
 /*Create an event listener that will show and hide the message when clicking on the button.
 */
+showHide.addEventListener("click", toggleText);
+function toggleText(){
+	var x = document.getElementById("showmoney");
+    if(x.style.display === "none"){
+        x.style.display = "block";
+    }else{
+        x.style.display = "none";
+    }
+}
